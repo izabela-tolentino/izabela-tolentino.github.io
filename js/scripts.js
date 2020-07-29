@@ -54,3 +54,37 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+var index = 0;
+function startup() {
+
+  //Animating welcome message on startup
+  //Adapted from: https://www.w3schools.com/howto/howto_js_animate.asp
+  var text = document.getElementById("title");
+  let message = 'Hello world! My name is Izabela.';
+  var numChar = 0;
+  var id = setInterval(frame, 55);
+
+  function frame() {
+    if(numChar == message.length) {
+      clearInterval(id);
+      cursorBlink();
+    } else {
+      text.innerHTML = text.innerHTML + message[numChar];
+      numChar++;
+    }
+  }
+  return;
+}
+
+function cursorBlink() {
+  index++;
+  if(index % 2 == 0) {
+    document.getElementById("title").innerHTML = "Hello world! My name is Izabela.|";
+  }
+  else {
+    document.getElementById("title").innerHTML = "Hello world! My name is Izabela.&nbsp";
+  }
+  setTimeout("cursorBlink()", 500);
+  return;
+}
