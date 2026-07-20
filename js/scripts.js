@@ -61,7 +61,7 @@ function startup() {
   //Animating welcome message on startup
   //Adapted from: https://www.w3schools.com/howto/howto_js_animate.asp
   var text = document.getElementById("title");
-  let message = 'Hi! I\'m a game designer.';
+  let message = 'Hi! I\'m a technical game designer.';
   var numChar = 0;
   var id = setInterval(frame, 55);
 
@@ -80,10 +80,10 @@ function startup() {
 function cursorBlink() {
   index++;
   if(index % 2 == 0) {
-    document.getElementById("title").innerHTML = "Hi! I\'m a game designer.|";
+    document.getElementById("title").innerHTML = "Hi! I\'m a technical game designer.|";
   }
   else {
-    document.getElementById("title").innerHTML = "Hi! I\'m a game designer.&nbsp";
+    document.getElementById("title").innerHTML = "Hi! I\'m a technical game designer.&nbsp";
   }
   setTimeout("cursorBlink()", 500);
   return;
